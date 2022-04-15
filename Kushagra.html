@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container1{
+        background-color: red;
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        transition: all 2s ease-in-out;
+      }
+      #container2{
+        background-color: rgb(106, 183, 232);
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        position: absolute;
+        bottom: 500px;
+        left: 100px;
+        transition: all 2s ease-in-out;
+      }
+      #container3{
+        background-color: yellow;
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        transition: all 2s ease-in-out;
+      }
+      #container4{
+        background-color: green;
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        position: absolute;
+        bottom: 500px;
+        left: 200px;
+        transition: all 2s ease-in-out;
+      }
+      #start{
+        position: absolute;
+        top: 300px;
+        left: 100px;
+      }
+      #stop{
+        position: absolute;
+        top: 300px;
+        left: 200px;
+      }
+
+      .cont1{
+        width: 130px !important;
+        background-color: yellow!important;
+      }
+      .cont2{
+        height: 150px !important;
+        background-color: green!important;
+      }
+      .cont3{
+        height: 130px !important;
+        background-color: rgb(106, 183, 232) !important;
+      }
+      .cont4{
+        width: 130px !important;
+        left:  100px !important;
+        background-color: red !important;        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="container1"></div>
+      <div id="container2"></div>
+      <div id="container3"></div>
+      <div id="container4"></div>
+      <button id="start" onclick="startfunction()">start</button>
+      <button id="stop" >stop</button>
+    </div>
+
+
+
+    <script type="text/javascript">
+      function startfunction(){  
+        setTimeout(()=>{
+            document.getElementById("container1").classList.add("cont1")
+            document.getElementById("container1").classList.add("cont1::after")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container1").classList.remove("cont1")            
+          },2000)
+          setTimeout(()=>{
+            document.getElementById("container2").classList.add("cont2")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container2").classList.remove("cont2")            
+          },2000)
+           setTimeout(()=>{
+            document.getElementById("container3").classList.add("cont3")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container3").classList.remove("cont3")            
+          },2000)
+          setTimeout(()=>{
+            document.getElementById("container4").classList.add("cont4")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container4").classList.remove("cont4")            
+          },2000)
+
+
+        setInterval(()=>{
+          setTimeout(()=>{
+            document.getElementById("container1").classList.add("cont1")
+            document.getElementById("container1").classList.add("cont1::after")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container1").classList.remove("cont1")            
+          },2000)
+        },4000)
+
+        setInterval(()=>{
+          setTimeout(()=>{
+            document.getElementById("container2").classList.add("cont2")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container2").classList.remove("cont2")            
+          },2000)
+        },4000)
+        
+        setInterval(()=>{
+          setTimeout(()=>{
+            document.getElementById("container3").classList.add("cont3")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container3").classList.remove("cont3")            
+          },2000)
+        },4000)  
+
+        setInterval(()=>{
+          setTimeout(()=>{
+            document.getElementById("container4").classList.add("cont4")
+          },000)
+          setTimeout(()=>{
+            document.getElementById("container4").classList.remove("cont4")            
+          },2000)
+        },4000) 
+        
+        
+      }
+    </script>
+  </body>
+</html>
